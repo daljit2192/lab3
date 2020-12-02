@@ -1,8 +1,4 @@
-<?php
-
-
-
-?>
+<?php //session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,7 +38,7 @@
                 </div>
                 <form action="make-cookies.php" method="post">
                 <div class="mdl-card__supporting-text">
-                    
+                        
                         <p>
                         <select name="theme">
                             <option value="0">Choose a theme to be stored in persistent cookie</option>
@@ -76,7 +72,9 @@
                 <div class="mdl-card__supporting-text">
                     
                     <?php
-                     
+                     // if(strlen($_SESSION["philosopher"]) !== 0 && $_COOKIE["theme"]){
+
+                     // }
                     ?> 
                     
                     
