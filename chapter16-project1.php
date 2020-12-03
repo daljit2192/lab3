@@ -72,6 +72,7 @@
                 <div class="mdl-card__supporting-text">
                     
                     <?php
+                    
                     if(isset($_COOKIE["philosopher"]) && isset($_COOKIE["theme"])){
                         echo "Presistent THEME cookie value is ".$_COOKIE["theme"];
                         echo "<br>";
