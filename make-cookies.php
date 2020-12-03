@@ -5,10 +5,11 @@
 			$theme = $_POST["theme"];
 			$philosopher = $_POST["philosopher"];
 			setcookie("theme", $theme, time() + 86400, "/");
-			$_SESSION["philosopher"] = $philosopher;
+			setcookie("philosopher", $philosopher,0,null);
+			// echo $_COOKIE["theme"]
 			header("Location: chapter16-project1.php");
 		} else {
-			 header("Location: chapter16-project1.php");
+			header("Location: chapter16-project1.php");
 		}
 	}
 ?>

@@ -1,4 +1,4 @@
-<?php //session_start(); ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,11 +72,16 @@
                 <div class="mdl-card__supporting-text">
                     
                     <?php
-                     // if(strlen($_SESSION["philosopher"]) !== 0 && $_COOKIE["theme"]){
-
-                     // }
-                    ?> 
-                    
+                    if(isset($_COOKIE["philosopher"]) && isset($_COOKIE["theme"])){
+                        echo "Presistent THEME cookie value is ".$_COOKIE["theme"];
+                        echo "<br>";
+                        echo "Session PHILOSPHER cookie is ".$_COOKIE["philosopher"];
+                    } else {
+                        echo "Presistent THEME cookie not found <br>";
+                        echo " <br>";
+                        echo "Session PHILOSPHER cookie not found";
+                    }
+                    ?>
                     
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
